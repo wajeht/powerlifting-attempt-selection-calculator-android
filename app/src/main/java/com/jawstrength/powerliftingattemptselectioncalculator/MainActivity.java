@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent  i = new Intent(MainActivity.this, ResultActivity.class);
                 startActivity(i);
 
-                System.out.println("hello world");
+
 
 
 
