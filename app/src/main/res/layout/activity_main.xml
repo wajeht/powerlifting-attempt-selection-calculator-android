@@ -35,6 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="Enter the heaviest weight lifted within past 1-2 weeks."
                 android:textAlignment="center"
@@ -49,7 +50,7 @@
             android:weightSum="4">
 
             <TextView
-                android:id="@+id/txtSquat"
+                android:id="@+id/txtBench"
                 android:layout_width="390dp"
                 android:layout_height="fill_parent"
                 android:layout_marginLeft="10dp"

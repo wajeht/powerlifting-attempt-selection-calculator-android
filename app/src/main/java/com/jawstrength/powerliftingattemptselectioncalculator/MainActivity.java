@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         final EditText sqRepID = findViewById(R.id.sqRep);
         final EditText sqWeightID = findViewById(R.id.sqWeight);
         final EditText sqRpeID = findViewById(R.id.sqRpe);
@@ -76,9 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
                 intent.putExtras(bundle);
                 startActivity(intent);
-
-                Log.d("TAG", String.valueOf(sq1RM));
-
             }
         });
 
