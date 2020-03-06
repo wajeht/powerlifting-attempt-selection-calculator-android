@@ -1,5 +1,5 @@
 # Powerlifting Attempt Selection Calculator
-This app was developed using coach Matt Gary gudice on which percentages where best to attempt at a powerlifting meet.
+This app was developed by using coach Matt Gary guidance on which percentages where best to attempt at a powerlifting meet. There is no attempt selection calculator on both android and iOS AppStore. So I decided to wrote this as a side project. This will be available on both paltform for free to download in a few week.
 
 [Coach Matt Gary's Website](https://marylandpowerlifting.com/2009/05/11/a-powerlifters-guide-to-attempt-selection/)
 
