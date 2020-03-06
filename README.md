@@ -5,7 +5,7 @@ This app was developed by using coach Matt Gary guidance on which percentages wh
 
 
 # Screenshot
-
+<br>
 <p align="center">
   <img src="https://github.com/wajeht/powerlifting_attempt_selection_calculator/blob/584053c3b275bbad3a521af2886264961fd1c9ea/app/src/main/res/drawable/screenshot.png">
 </p>
