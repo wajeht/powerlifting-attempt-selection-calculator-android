@@ -66,8 +66,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Low"
-                    android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textAlignment="textEnd" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -75,9 +74,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Medium    "
+                    android:text="Normal      "
                     android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -86,8 +86,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="High"
-                    android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textAlignment="center" />
 
             </LinearLayout>
 
@@ -108,7 +107,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/sq1Low"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -116,15 +115,17 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/sq1Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/sq1High"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -162,8 +163,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -204,8 +207,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -272,8 +277,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Low"
-                    android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textAlignment="textEnd" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -281,9 +285,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Medium    "
+                    android:text="Normal      "
                     android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -292,8 +297,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="High"
-                    android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textAlignment="center" />
 
             </LinearLayout>
 
@@ -314,7 +318,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/sq1Low"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -322,15 +326,17 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/sq1Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/sq1High"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -368,8 +374,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -410,8 +418,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView18"
@@ -477,8 +487,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Low"
-                    android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textAlignment="textEnd" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -486,9 +495,10 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Medium    "
+                    android:text="Normal      "
                     android:textAlignment="textEnd"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -497,8 +507,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="High"
-                    android:textAlignment="center"
-                    android:textColor="#000000" />
+                    android:textAlignment="center" />
 
             </LinearLayout>
 
@@ -519,7 +528,7 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/sq1Low"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -527,15 +536,17 @@
                     android:textAlignment="center" />
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/sq1Medium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/sq1High"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -573,8 +584,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -615,8 +628,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed"
                     android:text="-"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView18"

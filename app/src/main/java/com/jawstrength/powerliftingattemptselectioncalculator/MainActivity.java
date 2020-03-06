@@ -82,12 +82,12 @@ public class MainActivity extends AppCompatActivity {
 
     public int firstAttempt(int oneRepMax)
     {
-        return (int)(oneRepMax * 0.90);
+        return (int)(oneRepMax * 0.91);
     }
 
     public int secondAttempt(int oneRepMax)
     {
-        return (int)(oneRepMax * 0.95);
+        return (int)(oneRepMax * 0.96);
     }
 
     public int thirdAttempt(int oneRepMax)

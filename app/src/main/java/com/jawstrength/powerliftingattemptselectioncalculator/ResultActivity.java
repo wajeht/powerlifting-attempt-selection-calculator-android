@@ -16,12 +16,14 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        //TextView result = findViewById(R.id.txtResult);
+        TextView sq1Low = findViewById(R.id.sq1Low);
+        TextView sq1Medium = findViewById(R.id.sq1Medium);
+        TextView sq1High = findViewById(R.id.sq1High);
+
 
         int sq1Attempt = getIntent().getExtras().getInt("Squat1st");
         int sq2Attempt = getIntent().getExtras().getInt("Squat2nd");
         int sq3Attempt = getIntent().getExtras().getInt("Squat3rd");
-        //result.setText(Integer.toString(sq1Attempt));
 
         int bn1Attempt = getIntent().getExtras().getInt("Bench1st");
         int bn2Attempt = getIntent().getExtras().getInt("Bench2nd");
@@ -30,6 +32,12 @@ public class ResultActivity extends AppCompatActivity {
         int dl1Attempt = getIntent().getExtras().getInt("Deadlift1st");
         int dl2Attempt = getIntent().getExtras().getInt("Deadlift2nd");
         int dl3Attempt = getIntent().getExtras().getInt("Deadlift3rd");
+
+
+        sq1Low.setText(String.valueOf((int)(sq1Attempt+(sq1Attempt * 0.01))));
+        sq1Medium.setText(String.valueOf(sq1Attempt));
+        sq1High.setText(String.valueOf((int)(sq1Attempt+(sq1Attempt * 0.02))));
+
 
 
 
