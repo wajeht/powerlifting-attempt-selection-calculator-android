@@ -38,7 +38,7 @@
                 android:gravity="center"
                 android:text="Enter the heaviest weight lifted within past 1-2 weeks."
                 android:textAlignment="center"
-                android:textStyle="bold" />
+                android:textColor="#000000" />
 
         </LinearLayout>
 
@@ -52,14 +52,16 @@
                 android:id="@+id/txtSquat"
                 android:layout_width="390dp"
                 android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
                 android:gravity="bottom"
                 android:paddingBottom="6dp"
                 android:text="SQUAT:"
                 android:textAlignment="textEnd"
+                android:textColor="#1D2647"
                 android:textStyle="bold" />
 
             <EditText
@@ -112,14 +114,16 @@
                 android:id="@+id/txtBench"
                 android:layout_width="390dp"
                 android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
                 android:gravity="bottom"
                 android:paddingBottom="6dp"
                 android:text="BENCH:"
                 android:textAlignment="textEnd"
+                android:textColor="#1D2647"
                 android:textStyle="bold" />
 
             <EditText
@@ -173,14 +177,16 @@
                 android:id="@+id/txtDeadlift"
                 android:layout_width="390dp"
                 android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
                 android:gravity="bottom"
                 android:paddingBottom="6dp"
                 android:text="DEADLIFT:"
                 android:textAlignment="textEnd"
+                android:textColor="#1D2647"
                 android:textStyle="bold" />
 
             <EditText
@@ -235,7 +241,9 @@
                 android:layout_height="62dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="50dp"
-                android:background="#E10021"
+                android:background="#FFC92B33"
+                android:fontFamily="sans-serif-black"
+                android:soundEffectsEnabled="true"
                 android:text="CALCULATE"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
