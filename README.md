@@ -3,8 +3,8 @@ This app was developed by using coach Matt Gary guidance on which percentages wh
 
 [Coach Matt Gary's Website](https://marylandpowerlifting.com/2009/05/11/a-powerlifters-guide-to-attempt-selection/)
 
-![alt text](https://github.com/wajeht/powerlifting_attempt_selection_calculator/blob/584053c3b275bbad3a521af2886264961fd1c9ea/app/src/main/res/drawable/screenshot.png "Logo Title Text 1")
 
+# Screenshot
 
 <p align="center">
   <img src="https://github.com/wajeht/powerlifting_attempt_selection_calculator/blob/584053c3b275bbad3a521af2886264961fd1c9ea/app/src/main/res/drawable/screenshot.png">
