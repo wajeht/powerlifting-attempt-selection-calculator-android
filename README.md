@@ -5,5 +5,3 @@ This app was developed by using coach Matt Gary guidance on which percentages wh
 
 [Coach Matt Gary's Website](https://marylandpowerlifting.com/2009/05/11/a-powerlifters-guide-to-attempt-selection/)
 
-
-# Screenshot
