@@ -95,16 +95,5 @@ public class ResultActivity extends AppCompatActivity {
         dl3Low.setText(String.valueOf((int)(dl3Attempt-(dl3Attempt * 0.01))));
         dl3Normal.setText(String.valueOf(dl3Attempt));
         dl3High.setText(String.valueOf((int)(dl3Attempt+(dl3Attempt * 0.02))));
-
-
-
-
-
-
-
-
-
-
-
     }
 }
