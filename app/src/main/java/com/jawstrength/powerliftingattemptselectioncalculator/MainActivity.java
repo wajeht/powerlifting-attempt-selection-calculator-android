@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -14,6 +17,8 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -117,6 +122,32 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void openAbout(View view)
+    {
+        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+
+        alertDialog.setMessage("This app is free forever, but it still cost effort to maintain it on AppStore. \n \n Want to buy a cup of coffee?");
+        alertDialog.setCancelable(false);
+        alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes!!",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Uri uri = Uri.parse("http://paypal.me/akonyein"); // missing 'http://' will cause crashed
+                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                        startActivity(intent);
+                    }
+                });
+        alertDialog.show();
+        TextView messageText = (TextView)alertDialog.findViewById(android.R.id.message);
+        messageText.setGravity(Gravity.CENTER);
+
+        Button btnPositive = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) btnPositive.getLayoutParams();
+
+        //Changing the weight to negative pushes it to the left.
+        layoutParams.weight = 14;
+        btnPositive.setLayoutParams(layoutParams);
 
     }
 
