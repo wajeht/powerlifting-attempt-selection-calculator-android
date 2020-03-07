@@ -122,6 +122,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -166,6 +167,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -210,6 +212,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -276,8 +279,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Low"
-                    android:textAlignment="textEnd" />
+                    android:text="    Low"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -286,7 +289,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Normal"
-                    android:textAlignment="textEnd"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -333,6 +336,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -377,6 +381,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -421,6 +426,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -486,8 +492,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Low"
-                    android:textAlignment="textEnd" />
+                    android:text="    Low"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -496,7 +502,7 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed"
                     android:text="Normal"
-                    android:textAlignment="textEnd"
+                    android:textAlignment="center"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -543,6 +549,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -587,6 +594,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
@@ -631,6 +639,7 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="-"
                     android:textAlignment="center"
+                    android:textColor="#000000"
                     android:textStyle="bold" />
 
                 <TextView
