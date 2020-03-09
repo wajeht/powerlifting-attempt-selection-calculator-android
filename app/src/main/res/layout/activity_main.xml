@@ -26,6 +26,7 @@
                 android:layout_width="380dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="openAbout"
@@ -48,198 +49,209 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txtBench"
-                android:layout_width="390dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_conners"
-                android:fontFamily="sans-serif-black"
-                android:gravity="bottom"
-                android:paddingBottom="6dp"
-                android:text="SQUAT:"
-                android:textAlignment="textEnd"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-            <EditText
-                android:id="@+id/sqRep"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rep"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/txtBench"
+                    android:layout_width="390dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_conners"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="SQUAT:"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/sqWeight"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="weight"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <EditText
+                    android:id="@+id/sqRep"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rep"
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
-            <EditText
-                android:id="@+id/sqRpe"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rpe"
-                android:inputType="number"
-                android:textAlignment="center" />
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/sqWeight"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="weight"
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="4">
+                <EditText
+                    android:id="@+id/sqRpe"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rpe"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtBench"
-                android:layout_width="390dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_conners"
-                android:fontFamily="sans-serif-black"
-                android:gravity="bottom"
-                android:paddingBottom="6dp"
-                android:text="BENCH:"
-                android:textAlignment="textEnd"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
 
-            <EditText
-                android:id="@+id/bnRep"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rep"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/txtBench"
+                    android:layout_width="390dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_conners"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="BENCH:"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/bnWeight"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="weight"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <EditText
+                    android:id="@+id/bnRep"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rep"
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
-            <EditText
-                android:id="@+id/bnRpe"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rpe"
-                android:inputType="number"
-                android:textAlignment="center" />
-        </LinearLayout>
+                <EditText
+                    android:id="@+id/bnWeight"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="weight"
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="4">
+                <EditText
+                    android:id="@+id/bnRpe"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rpe"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtDeadlift"
-                android:layout_width="390dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/rounded_conners"
-                android:fontFamily="sans-serif-black"
-                android:gravity="bottom"
-                android:paddingBottom="6dp"
-                android:text="DEADLIFT:"
-                android:textAlignment="textEnd"
-                android:textColor="#000000"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
 
-            <EditText
-                android:id="@+id/dlRep"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rep"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/txtDeadlift"
+                    android:layout_width="390dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_conners"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="DEADLIFT:"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/dlWeight"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="weight"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <EditText
+                    android:id="@+id/dlRep"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rep"
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
-            <EditText
-                android:id="@+id/dlRpe"
-                android:layout_width="400dp"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="rpe"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <EditText
+                    android:id="@+id/dlWeight"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="weight"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/dlRpe"
+                    android:layout_width="400dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="rpe"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <Button
@@ -257,4 +269,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
