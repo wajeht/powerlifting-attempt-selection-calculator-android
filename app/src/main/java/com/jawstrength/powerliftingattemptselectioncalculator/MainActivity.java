@@ -151,7 +151,6 @@ public class MainActivity extends AppCompatActivity {
         Button btnPositive = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) btnPositive.getLayoutParams();
 
-
         //Changing the weight to negative pushes it to the left.
         layoutParams.weight = 1.5f;
         btnPositive.setLayoutParams(layoutParams);
