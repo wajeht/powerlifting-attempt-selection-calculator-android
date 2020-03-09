@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                     int dl2nd = secondAttempt(dl1RM);
                     int dl3rd = thirdAttempt(dl1RM);
 
-                    // passing 1rm to resultactivity
+                    // passing 1rm to resultActivity
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("Squat1st", sq1st);
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void openAbout(View view)
     {
-        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+        final AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
 
         alertDialog.setMessage("This app is free forever, but it still cost effort to maintain it on AppStore. \n \n Want to buy a cup of coffee?");
         alertDialog.setCancelable(false);
@@ -138,6 +138,12 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        alertDialog.dismiss();
+                    }
+                });
         alertDialog.show();
         TextView messageText = (TextView)alertDialog.findViewById(android.R.id.message);
         messageText.setGravity(Gravity.CENTER);
@@ -145,8 +151,9 @@ public class MainActivity extends AppCompatActivity {
         Button btnPositive = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) btnPositive.getLayoutParams();
 
+
         //Changing the weight to negative pushes it to the left.
-        layoutParams.weight = 14;
+        layoutParams.weight = 1.5f;
         btnPositive.setLayoutParams(layoutParams);
 
     }
