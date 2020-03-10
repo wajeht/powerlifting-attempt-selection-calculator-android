@@ -12,6 +12,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        // assign id
         TextView sq1Low = findViewById(R.id.sq1Low);
         TextView sq1Normal = findViewById(R.id.sq1Normal);
         TextView sq1High = findViewById(R.id.sq1High);
@@ -48,6 +49,7 @@ public class ResultActivity extends AppCompatActivity {
         TextView dl3Normal = findViewById(R.id.dl3Normal);
         TextView dl3High = findViewById(R.id.dl3High);
 
+        // get user data from mainActivity
         int sq1Attempt = getIntent().getExtras().getInt("Squat1st");
         int sq2Attempt = getIntent().getExtras().getInt("Squat2nd");
         int sq3Attempt = getIntent().getExtras().getInt("Squat3rd");
@@ -60,6 +62,7 @@ public class ResultActivity extends AppCompatActivity {
         int dl2Attempt = getIntent().getExtras().getInt("Deadlift2nd");
         int dl3Attempt = getIntent().getExtras().getInt("Deadlift3rd");
 
+        // print out squat attempts
         sq1Low.setText(String.valueOf((int)(sq1Attempt-(sq1Attempt * 0.01))));
         sq1Normal.setText(String.valueOf(sq1Attempt));
         sq1High.setText(String.valueOf((int)(sq1Attempt+(sq1Attempt * 0.02))));
@@ -72,6 +75,7 @@ public class ResultActivity extends AppCompatActivity {
         sq3Normal.setText(String.valueOf(sq3Attempt));
         sq3High.setText(String.valueOf((int)(sq3Attempt+(sq3Attempt * 0.02))));
 
+        // print out bench attempts
         bn1Low.setText(String.valueOf((int)(bn1Attempt-(bn1Attempt * 0.01))));
         bn1Normal.setText(String.valueOf(bn1Attempt));
         bn1High.setText(String.valueOf((int)(bn1Attempt+(bn1Attempt * 0.02))));
@@ -84,6 +88,7 @@ public class ResultActivity extends AppCompatActivity {
         bn3Normal.setText(String.valueOf(bn3Attempt));
         bn3High.setText(String.valueOf((int)(bn3Attempt+(bn3Attempt * 0.02))));
 
+        // print out deadlift attempts
         dl1Low.setText(String.valueOf((int)(dl1Attempt-(dl1Attempt * 0.01))));
         dl1Normal.setText(String.valueOf(dl1Attempt));
         dl1High.setText(String.valueOf((int)(dl1Attempt+(dl1Attempt * 0.02))));
