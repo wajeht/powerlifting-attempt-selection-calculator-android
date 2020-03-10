@@ -22,6 +22,19 @@ import java.lang.reflect.Method;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String ATTEMPTS_SQUAT_1 = "squat 1st attempt";
+    public static final String ATTEMPTS_SQUAT_2 = "squat 2nd attempt";
+    public static final String ATTEMPTS_SQUAT_3 = "squat 3rd attempts";
+
+    public static final String ATTEMPTS_BENCH_1 = "bench 1st attempt";
+    public static final String ATTEMPTS_BENCH_2 = "bench 2nd attempt";
+    public static final String ATTEMPTS_BENCH_3 = "bench 3rd attempts";
+
+    public static final String ATTEMPTS_DEADLIFT_1 = "deadlift 1st attempt";
+    public static final String ATTEMPTS_DEADLIFT_2 = "deadlift 2nd attempt";
+    public static final String ATTEMPTS_DEADLIFT_3 = "deadlift 3rd attempts";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         final Button btnCalculate = findViewById(R.id.btnCalculate);
 
+        // error handling if use dind't input all fields
         btnCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,17 +120,17 @@ public class MainActivity extends AppCompatActivity {
                     // passing 1rm to resultActivity
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle bundle = new Bundle();
-                    bundle.putInt("Squat1st", sq1st);
-                    bundle.putInt("Squat2nd", sq2nd);
-                    bundle.putInt("Squat3rd", sq3rd);
+                    bundle.putInt(MainActivity.ATTEMPTS_SQUAT_1, sq1st);
+                    bundle.putInt(MainActivity.ATTEMPTS_SQUAT_2, sq2nd);
+                    bundle.putInt(MainActivity.ATTEMPTS_SQUAT_3, sq3rd);
 
-                    bundle.putInt("Bench1st", bn1st);
-                    bundle.putInt("Bench2nd", bn2nd);
-                    bundle.putInt("Bench3rd", bn3rd);
+                    bundle.putInt(MainActivity.ATTEMPTS_BENCH_1, bn1st);
+                    bundle.putInt(MainActivity.ATTEMPTS_BENCH_2, bn2nd);
+                    bundle.putInt(MainActivity.ATTEMPTS_BENCH_3, bn3rd);
 
-                    bundle.putInt("Deadlift1st", dl1st);
-                    bundle.putInt("Deadlift2nd", dl2nd);
-                    bundle.putInt("Deadlift3rd", dl3rd);
+                    bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_1, dl1st);
+                    bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_2, dl2nd);
+                    bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_3, dl3rd);
 
                     intent.putExtras(bundle);
                     startActivity(intent);

@@ -50,17 +50,17 @@ public class ResultActivity extends AppCompatActivity {
         TextView dl3High = findViewById(R.id.dl3High);
 
         // get user data from mainActivity
-        int sq1Attempt = getIntent().getExtras().getInt("Squat1st");
-        int sq2Attempt = getIntent().getExtras().getInt("Squat2nd");
-        int sq3Attempt = getIntent().getExtras().getInt("Squat3rd");
+        int sq1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_1);
+        int sq2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_2);
+        int sq3Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_3);
 
-        int bn1Attempt = getIntent().getExtras().getInt("Bench1st");
-        int bn2Attempt = getIntent().getExtras().getInt("Bench2nd");
-        int bn3Attempt = getIntent().getExtras().getInt("Bench3rd");
+        int bn1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_BENCH_1);
+        int bn2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_BENCH_2);
+        int bn3Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_BENCH_3);
 
-        int dl1Attempt = getIntent().getExtras().getInt("Deadlift1st");
-        int dl2Attempt = getIntent().getExtras().getInt("Deadlift2nd");
-        int dl3Attempt = getIntent().getExtras().getInt("Deadlift3rd");
+        int dl1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_1);
+        int dl2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_2);
+        int dl3Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_3);
 
         // print out squat attempts
         sq1Low.setText(String.valueOf((int)(sq1Attempt-(sq1Attempt * 0.01))));
