@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     btnPositive.setLayoutParams(layoutParams);
 
                 } else {
+                    // assign id, calculate one max, and attempts
                     int sqRepInput = Integer.parseInt(sqRepID.getText().toString());
                     int sqWeightInput = Integer.parseInt(sqWeightID.getText().toString());
                     int sqRpeInput = Integer.parseInt(sqRpeID.getText().toString());
