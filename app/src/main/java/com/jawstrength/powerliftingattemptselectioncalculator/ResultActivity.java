@@ -12,7 +12,8 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        // assign id
+        // assign id to textviews
+        // squat attempts id
         TextView sq1Low = findViewById(R.id.sq1Low);
         TextView sq1Normal = findViewById(R.id.sq1Normal);
         TextView sq1High = findViewById(R.id.sq1High);
@@ -25,6 +26,7 @@ public class ResultActivity extends AppCompatActivity {
         TextView sq3Normal = findViewById(R.id.sq3Normal);
         TextView sq3High = findViewById(R.id.sq3High);
 
+        // bench attempts id
         TextView bn1Low = findViewById(R.id.bn1Low);
         TextView bn1Normal = findViewById(R.id.bn1Normal);
         TextView bn1High = findViewById(R.id.bn1High);
@@ -37,6 +39,7 @@ public class ResultActivity extends AppCompatActivity {
         TextView bn3Normal = findViewById(R.id.bn3Normal);
         TextView bn3High = findViewById(R.id.bn3High);
 
+        // deadlift attempts id
         TextView dl1Low = findViewById(R.id.dl1Low);
         TextView dl1Normal = findViewById(R.id.dl1Normal);
         TextView dl1High = findViewById(R.id.dl1High);
