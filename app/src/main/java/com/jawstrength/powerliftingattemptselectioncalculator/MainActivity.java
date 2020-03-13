@@ -17,6 +17,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String MAX_SQUAT = "sq";
+    public static final String MAX_BENCH = "bn";
+    public static final String MAX_DEADLIFT = "dl";
+
     public static final String ATTEMPTS_SQUAT_1 = "squat 1st attempt";
     public static final String ATTEMPTS_SQUAT_2 = "squat 2nd attempt";
     public static final String ATTEMPTS_SQUAT_3 = "squat 3rd attempts";
@@ -115,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
                     // passing 1rm to resultActivity
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle bundle = new Bundle();
+
+                    bundle.putInt(MainActivity.MAX_SQUAT, sq1RM);
+                    bundle.putInt(MainActivity.MAX_BENCH, bn1RM);
+                    bundle.putInt(MainActivity.MAX_DEADLIFT, dl1RM);
+
                     bundle.putInt(MainActivity.ATTEMPTS_SQUAT_1, sq1st);
                     bundle.putInt(MainActivity.ATTEMPTS_SQUAT_2, sq2nd);
                     bundle.putInt(MainActivity.ATTEMPTS_SQUAT_3, sq3rd);

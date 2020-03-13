@@ -12,6 +12,11 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        TextView sqe1RM = findViewById(R.id.txtSquat);
+        TextView bne1RM = findViewById(R.id.txtBench);
+        TextView dle1RM = findViewById(R.id.txtDeadlift);
+
+
         // assign id to textviews
         // squat attempts id
         TextView sq1Low = findViewById(R.id.sq1Low);
@@ -64,6 +69,16 @@ public class ResultActivity extends AppCompatActivity {
         int dl1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_1);
         int dl2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_2);
         int dl3Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_DEADLIFT_3);
+
+        // e1rm
+        int squatMAX = getIntent().getExtras().getInt(MainActivity.MAX_SQUAT);
+        int benchMAX = getIntent().getExtras().getInt(MainActivity.MAX_BENCH);
+        int deadliftMAX = getIntent().getExtras().getInt(MainActivity.MAX_DEADLIFT);
+
+        sqe1RM.setText("SQUAT e1RM: " + String.valueOf(squatMAX));
+        bne1RM.setText("BENCH e1RM: " + String.valueOf(benchMAX));
+        dle1RM.setText("DEADLIFT e1RM: " + String.valueOf(deadliftMAX));
+
 
         // print out squat attempts
         sq1Low.setText(String.valueOf((int)(sq1Attempt-(sq1Attempt * 0.01))));
