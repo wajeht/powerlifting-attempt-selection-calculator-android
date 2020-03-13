@@ -248,6 +248,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/txtBench"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="bottom"
@@ -459,7 +460,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/txtBench"
+                    android:id="@+id/txtDeadlift"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="bottom"
