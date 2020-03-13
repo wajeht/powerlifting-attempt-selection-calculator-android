@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
