@@ -31,35 +31,35 @@ public class ResultActivity extends AppCompatActivity {
         final TextView sq2Normal = findViewById(R.id.sq2Normal);
         final TextView sq2High = findViewById(R.id.sq2High);
 
-        TextView sq3Low = findViewById(R.id.sq3Low);
-        TextView sq3Normal = findViewById(R.id.sq3Normal);
-        TextView sq3High = findViewById(R.id.sq3High);
+        final TextView sq3Low = findViewById(R.id.sq3Low);
+        final TextView sq3Normal = findViewById(R.id.sq3Normal);
+        final TextView sq3High = findViewById(R.id.sq3High);
 
         // bench attempts id
-        TextView bn1Low = findViewById(R.id.bn1Low);
-        TextView bn1Normal = findViewById(R.id.bn1Normal);
-        TextView bn1High = findViewById(R.id.bn1High);
+        final TextView bn1Low = findViewById(R.id.bn1Low);
+        final TextView bn1Normal = findViewById(R.id.bn1Normal);
+        final TextView bn1High = findViewById(R.id.bn1High);
 
-        TextView bn2Low = findViewById(R.id.bn2Low);
-        TextView bn2Normal = findViewById(R.id.bn2Normal);
-        TextView bn2High = findViewById(R.id.bn2High);
+        final TextView bn2Low = findViewById(R.id.bn2Low);
+        final TextView bn2Normal = findViewById(R.id.bn2Normal);
+        final TextView bn2High = findViewById(R.id.bn2High);
 
-        TextView bn3Low = findViewById(R.id.bn3Low);
-        TextView bn3Normal = findViewById(R.id.bn3Normal);
-        TextView bn3High = findViewById(R.id.bn3High);
+        final TextView bn3Low = findViewById(R.id.bn3Low);
+        final TextView bn3Normal = findViewById(R.id.bn3Normal);
+        final TextView bn3High = findViewById(R.id.bn3High);
 
         // deadlift attempts id
-        TextView dl1Low = findViewById(R.id.dl1Low);
-        TextView dl1Normal = findViewById(R.id.dl1Normal);
-        TextView dl1High = findViewById(R.id.dl1High);
+        final TextView dl1Low = findViewById(R.id.dl1Low);
+        final TextView dl1Normal = findViewById(R.id.dl1Normal);
+        final TextView dl1High = findViewById(R.id.dl1High);
 
-        TextView dl2Low = findViewById(R.id.dl2Low);
-        TextView dl2Normal = findViewById(R.id.dl2Normal);
-        TextView dl2High = findViewById(R.id.dl2High);
+        final TextView dl2Low = findViewById(R.id.dl2Low);
+        final TextView dl2Normal = findViewById(R.id.dl2Normal);
+        final TextView dl2High = findViewById(R.id.dl2High);
 
-        TextView dl3Low = findViewById(R.id.dl3Low);
-        TextView dl3Normal = findViewById(R.id.dl3Normal);
-        TextView dl3High = findViewById(R.id.dl3High);
+        final TextView dl3Low = findViewById(R.id.dl3Low);
+        final TextView dl3Normal = findViewById(R.id.dl3Normal);
+        final TextView dl3High = findViewById(R.id.dl3High);
 
         // get user data from mainActivity
         final int sq1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_1);
@@ -125,7 +125,7 @@ public class ResultActivity extends AppCompatActivity {
 
 
 
-
+        // squat 1st attemtp
         sq1Low.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
@@ -189,6 +189,134 @@ public class ResultActivity extends AppCompatActivity {
             }
         });
 
+        //sq 2nd attempt
+        sq2Low.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq2Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq2Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq2Low.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq2Low.setBackground(null);
+                    sq2Low.setBackgroundTintList(null);
+                    sq2Low.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
+
+        sq2Normal.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq2Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq2Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq2Normal.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq2Normal.setBackground(null);
+                    sq2Normal.setBackgroundTintList(null);
+                    sq2Normal.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
+
+        sq2High.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq2High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq2High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq2High.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq2High.setBackground(null);
+                    sq2High.setBackgroundTintList(null);
+                    sq2High.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
+
+
+        //sq 3 attempt
+        sq3Low.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq3Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq3Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq3Low.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq3Low.setBackground(null);
+                    sq3Low.setBackgroundTintList(null);
+                    sq3Low.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
+
+        sq3Normal.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq3Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq3Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq3Normal.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq3Normal.setBackground(null);
+                    sq3Normal.setBackgroundTintList(null);
+                    sq3Normal.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
+
+        sq3High.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                boolean isClick = !v.isSelected();
+                v.setSelected(isClick);
+                if(isClick)
+                {
+                    sq3High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
+                    sq3High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+                    sq3High.setTextColor(Color.parseColor("#FFFFFF"));
+                }
+                else
+                {
+                    sq3High.setBackground(null);
+                    sq3High.setBackgroundTintList(null);
+                    sq3High.setTextColor(Color.parseColor("#000000"));
+                }
+            }
+        });
 
 
 
