@@ -1,21 +1,32 @@
 package com.jawstrength.powerliftingattemptselectioncalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.math.MathUtils;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.EventLogTags;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+
 public class ResultActivity extends AppCompatActivity {
+
+    public ArrayList<Integer> Total = new ArrayList<>(27);
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+
 
         TextView sqe1RM = findViewById(R.id.txtSquat);
         TextView bne1RM = findViewById(R.id.txtBench);
@@ -61,6 +72,9 @@ public class ResultActivity extends AppCompatActivity {
         final TextView dl3Low = findViewById(R.id.dl3Low);
         final TextView dl3Normal = findViewById(R.id.dl3Normal);
         final TextView dl3High = findViewById(R.id.dl3High);
+
+        final TextView textViewTotal = findViewById(R.id.textViewTotal);
+
 
         // get user data from mainActivity
         final int sq1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_1);
@@ -135,12 +149,19 @@ public class ResultActivity extends AppCompatActivity {
                 v.setSelected(isClick);
                 if(isClick)
                 {
+                    Total.add((int)(sq1Attempt-(sq1Attempt * 0.01)));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1Low.setTextColor(Color.parseColor("#FFFFFF"));
                 }
                 else
                 {
+
+                    Total.remove((Integer) ((int)(sq1Attempt-(sq1Attempt * 0.01))));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1Low.setBackground(null);
                     sq1Low.setBackgroundTintList(null);
                     sq1Low.setTextColor(Color.parseColor("#000000"));
@@ -156,12 +177,18 @@ public class ResultActivity extends AppCompatActivity {
                 v.setSelected(isClick);
                 if(isClick)
                 {
+                    Total.add((Integer) (sq1Attempt));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 }
                 else
                 {
+                    Total.remove((Integer) (sq1Attempt));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1Normal.setBackground(null);
                     sq1Normal.setBackgroundTintList(null);
                     sq1Normal.setTextColor(Color.parseColor("#000000"));
@@ -177,12 +204,19 @@ public class ResultActivity extends AppCompatActivity {
                 v.setSelected(isClick);
                 if(isClick)
                 {
+                    Total.add((int)(sq1Attempt+(sq1Attempt * 0.02)));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1High.setTextColor(Color.parseColor("#FFFFFF"));
                 }
                 else
                 {
+
+                    Total.remove((Integer) ((int)(sq1Attempt+(sq1Attempt * 0.02))));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
                     sq1High.setBackground(null);
                     sq1High.setBackgroundTintList(null);
                     sq1High.setTextColor(Color.parseColor("#000000"));
@@ -318,10 +352,21 @@ public class ResultActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    public int showTotal()
+    {
 
+        int sum = 0;
 
+        if ( !Total.isEmpty())
+        {
+            for (int i = 0; i < Total.size(); i++)
+            {
+                sum += Total.get(i);
+            }
+        }
 
-
+        return sum;
     }
 }
