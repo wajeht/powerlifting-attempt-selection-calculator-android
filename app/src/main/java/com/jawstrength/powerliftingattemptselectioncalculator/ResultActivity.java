@@ -78,7 +78,7 @@ public class ResultActivity extends AppCompatActivity {
 
         // get user data from mainActivity
         final int sq1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_1);
-        int sq2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_2);
+        final int sq2Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_2);
         int sq3Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_SQUAT_3);
 
         int bn1Attempt = getIntent().getExtras().getInt(MainActivity.ATTEMPTS_BENCH_1);
@@ -233,6 +233,10 @@ public class ResultActivity extends AppCompatActivity {
                 v.setSelected(isClick);
                 if(isClick)
                 {
+                    Total.add((int)(sq2Attempt-(sq2Attempt * 0.01)));
+                    textViewTotal.setText(String.valueOf(showTotal()));
+
+
                     sq2Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq2Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq2Low.setTextColor(Color.parseColor("#FFFFFF"));
