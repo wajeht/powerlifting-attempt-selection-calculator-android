@@ -34,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     public static final String ATTEMPTS_DEADLIFT_2 = "deadlift 2nd attempt";
     public static final String ATTEMPTS_DEADLIFT_3 = "deadlift 3rd attempts";
 
+    public static final String INFO_BODYWEIGHT = "body weight";
+    public static final String INFO_MALE = "male";
+    public static final String INFO_FEMALE = "female";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText dlRpeID = findViewById(R.id.dlRpe);
 
         final Button btnCalculate = findViewById(R.id.btnCalculate);
+
 
         // error handling if use dind't input all fields
         btnCalculate.setOnClickListener(new View.OnClickListener() {
