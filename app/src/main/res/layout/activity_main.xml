@@ -26,7 +26,6 @@
                 android:layout_width="380dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:layout_weight="1"
                 android:clickable="true"
                 android:onClick="openAbout"
@@ -37,6 +36,7 @@
                 android:id="@+id/txtInstruction"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
@@ -49,25 +49,105 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="750dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="6">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtGender"
+                    android:layout_width="94dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="bottom"
+                    android:text="GENDER:"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/RadioButton_Male"
+                    android:layout_width="80dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/RadioButton_Femal"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:paddingRight="2dp"
+                    android:text="Female" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txtBodyweight"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="bottom"
+                    android:text="BODYWEIGHT:"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/bodyweight"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="lbs."
+                    android:inputType="numberSigned"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
                 <TextView
                     android:id="@+id/txtSquat"
-                    android:layout_width="390dp"
+                    android:layout_width="422dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_conners"
                     android:fontFamily="sans-serif-black"
@@ -83,9 +163,9 @@
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rep"
@@ -96,9 +176,9 @@
                     android:id="@+id/sqWeight"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="weight"
@@ -109,9 +189,9 @@
                     android:id="@+id/sqRpe"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rpe"
@@ -122,14 +202,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
                 android:weightSum="4">
 
                 <TextView
                     android:id="@+id/txtBench"
-                    android:layout_width="390dp"
+                    android:layout_width="422dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_conners"
                     android:fontFamily="sans-serif-black"
@@ -145,8 +228,9 @@
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rep"
@@ -157,8 +241,9 @@
                     android:id="@+id/bnWeight"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="weight"
@@ -169,8 +254,9 @@
                     android:id="@+id/bnRpe"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rpe"
@@ -181,16 +267,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="4">
 
                 <TextView
                     android:id="@+id/txtDeadlift"
-                    android:layout_width="390dp"
+                    android:layout_width="422dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/rounded_conners"
                     android:fontFamily="sans-serif-black"
@@ -206,9 +293,9 @@
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rep"
@@ -219,9 +306,9 @@
                     android:id="@+id/dlWeight"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="weight"
@@ -232,9 +319,9 @@
                     android:id="@+id/dlRpe"
                     android:layout_width="400dp"
                     android:layout_height="fill_parent"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="3dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
                     android:hint="rpe"
@@ -246,7 +333,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="700dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -255,10 +342,11 @@
                 android:layout_width="200dp"
                 android:layout_height="62dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/rounded_conners"
                 android:backgroundTint="#C82C33"
                 android:fontFamily="sans-serif-black"
+                android:gravity="center"
                 android:soundEffectsEnabled="true"
                 android:text="CALCULATE"
                 android:textColor="#FFFFFF" />

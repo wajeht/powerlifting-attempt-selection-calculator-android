@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 
@@ -39,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final EditText bodyWeightID = findViewById(R.id.bodyweight);
+        final RadioButton rbtnMaleID = findViewById(R.id.RadioButton_Male);
+        final RadioButton rbtnFemaleID = findViewById(R.id.RadioButton_Femal);
+
         final EditText sqRepID = findViewById(R.id.sqRep);
         final EditText sqWeightID = findViewById(R.id.sqWeight);
         final EditText sqRpeID = findViewById(R.id.sqRpe);
@@ -64,6 +69,10 @@ public class MainActivity extends AppCompatActivity {
                         bnRepID.getText().toString().isEmpty() ||
                         bnWeightID.getText().toString().isEmpty() ||
                         bnRpeID.getText().toString().isEmpty() ||
+
+                        bodyWeightID.getText().toString().isEmpty() ||
+                        rbtnMaleID.getText().toString().isEmpty() ||
+                        rbtnFemaleID.getText().toString().isEmpty() ||
 
                         dlRepID.getText().toString().isEmpty() ||
                         dlWeightID.getText().toString().isEmpty() ||
