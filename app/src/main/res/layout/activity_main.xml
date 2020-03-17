@@ -76,24 +76,36 @@
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/RadioButton_Male"
-                    android:layout_width="80dp"
-                    android:layout_height="fill_parent"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="3dp"
-                    android:text="Male" />
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
 
-                <RadioButton
-                    android:id="@+id/RadioButton_Femal"
-                    android:layout_width="100dp"
-                    android:layout_height="fill_parent"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginBottom="3dp"
-                    android:paddingRight="2dp"
-                    android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_Male"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:checked="true"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/RadioButton_Femal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:paddingRight="2dp"
+                        android:text="Female" />
+                </RadioGroup>
 
             </LinearLayout>
 

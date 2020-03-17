@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -34,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String ATTEMPTS_DEADLIFT_2 = "deadlift 2nd attempt";
     public static final String ATTEMPTS_DEADLIFT_3 = "deadlift 3rd attempts";
 
-    public static final String INFO_BODYWEIGHT = "body weight";
-    public static final String INFO_MALE = "male";
-    public static final String INFO_FEMALE = "female";
-
+    public static final String WILKS = "body weight";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText bodyWeightID = findViewById(R.id.bodyweight);
-        final RadioButton rbtnMaleID = findViewById(R.id.RadioButton_Male);
-        final RadioButton rbtnFemaleID = findViewById(R.id.RadioButton_Femal);
 
         final EditText sqRepID = findViewById(R.id.sqRep);
         final EditText sqWeightID = findViewById(R.id.sqWeight);
@@ -76,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
                         bnRpeID.getText().toString().isEmpty() ||
 
                         bodyWeightID.getText().toString().isEmpty() ||
-                        rbtnMaleID.getText().toString().isEmpty() ||
-                        rbtnFemaleID.getText().toString().isEmpty() ||
 
                         dlRepID.getText().toString().isEmpty() ||
                         dlWeightID.getText().toString().isEmpty() ||
@@ -130,9 +124,15 @@ public class MainActivity extends AppCompatActivity {
                     int dl2nd = secondAttempt(dl1RM);
                     int dl3rd = thirdAttempt(dl1RM);
 
+                    int bodyweight = Integer.parseInt(bodyWeightID.getText().toString());
+
+                    double wilks = wilks(bodyweight);
+
                     // passing 1rm to resultActivity
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle bundle = new Bundle();
+
+                    bundle.putInt(MainActivity.WILKS, (int) wilks);
 
                     bundle.putInt(MainActivity.MAX_SQUAT, sq1RM);
                     bundle.putInt(MainActivity.MAX_BENCH, bn1RM);
@@ -208,5 +208,25 @@ public class MainActivity extends AppCompatActivity {
     public int oneRepMax(int rep, int weight, int rpe)
     {
         return (int)((weight*((10-(rpe+1))+rep)*0.03)+weight);
+    }
+
+    public double wilks(int bodyweight)
+    {
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+
+        RadioButton radioButton_male = findViewById(R.id.RadioButton_Male);
+        RadioButton radioButton_female = findViewById(R.id.RadioButton_Femal);
+
+        double result = 0;
+
+        if (radioButton_male.isChecked())
+        {
+            result = (500/(-0.0000000078*Math.pow(bodyweight,5)+0.0000041543*Math.pow(bodyweight,4)-0.0006430507*Math.pow(bodyweight,3)-0.0126966343*Math.pow(bodyweight,2)+11.9982753419*(bodyweight)-82.5815609216));
+        }
+        else if (radioButton_female.isChecked())
+        {
+            result = (500/(-0.0000000071*Math.pow(bodyweight,5)+0.0000015978*Math.pow(bodyweight,4)+0.0003282035*Math.pow(bodyweight,3)-0.1389344062*Math.pow(bodyweight,2)+16.2595764612*(bodyweight)-182.5406521018));
+        }
+        return result;
     }
 }

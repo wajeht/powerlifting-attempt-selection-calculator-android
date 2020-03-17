@@ -34,9 +34,14 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
 
+
+
         TextView sqe1RM = findViewById(R.id.txtSquat);
         TextView bne1RM = findViewById(R.id.txtBench);
         TextView dle1RM = findViewById(R.id.txtDeadlift);
+
+
+        final TextView textViewWilks = findViewById(R.id.textViewWilks);
 
 
         // assign id to textviews
@@ -80,6 +85,9 @@ public class ResultActivity extends AppCompatActivity {
         final TextView dl3High = findViewById(R.id.dl3High);
 
         final TextView textViewTotal = findViewById(R.id.textViewTotal);
+
+        final double wilks = getIntent().getExtras().getDouble(MainActivity.WILKS);
+        textViewWilks.setText(String.valueOf(wilks * showTotal()));
 
 
         // get user data from mainActivity
