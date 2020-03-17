@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                     Bundle bundle = new Bundle();
 
-                    bundle.putInt(MainActivity.WILKS, (int) wilks);
+                    bundle.putDouble(MainActivity.WILKS, wilks);
 
                     bundle.putInt(MainActivity.MAX_SQUAT, sq1RM);
                     bundle.putInt(MainActivity.MAX_BENCH, bn1RM);
@@ -221,11 +221,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (radioButton_male.isChecked())
         {
-            result = (500/(-0.0000000078*Math.pow(bodyweight,5)+0.0000041543*Math.pow(bodyweight,4)-0.0006430507*Math.pow(bodyweight,3)-0.0126966343*Math.pow(bodyweight,2)+11.9982753419*(bodyweight)-82.5815609216));
+            result = (500/(-0.0000000078*Math.pow(bodyweight/ 2.20462,5)+0.0000041543*Math.pow(bodyweight/ 2.20462,4)-0.0006430507*Math.pow(bodyweight / 2.20462,3)-0.0126966343*Math.pow(bodyweight/ 2.20462,2)+11.9982753419*(bodyweight/ 2.20462)-82.5815609216));
         }
         else if (radioButton_female.isChecked())
         {
-            result = (500/(-0.0000000071*Math.pow(bodyweight,5)+0.0000015978*Math.pow(bodyweight,4)+0.0003282035*Math.pow(bodyweight,3)-0.1389344062*Math.pow(bodyweight,2)+16.2595764612*(bodyweight)-182.5406521018));
+            result = (500/(-0.0000000071*Math.pow(bodyweight/ 2.20462,5)+0.0000015978*Math.pow(bodyweight/ 2.20462,4)+0.0003282035*Math.pow(bodyweight/ 2.20462,3)-0.1389344062*Math.pow(bodyweight/ 2.20462,2)+16.2595764612*(bodyweight/ 2.20462)-182.5406521018));
         }
         return result;
     }

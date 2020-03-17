@@ -87,7 +87,9 @@ public class ResultActivity extends AppCompatActivity {
         final TextView textViewTotal = findViewById(R.id.textViewTotal);
 
         final double wilks = getIntent().getExtras().getDouble(MainActivity.WILKS);
-        textViewWilks.setText(String.valueOf(wilks * showTotal()));
+        textViewWilks.setText(String.valueOf((int)(wilks * (showTotal() / 2.20462))));
+
+        Log.d(MainActivity.ATTEMPTS_BENCH_1, String.valueOf(wilks));
 
 
         // get user data from mainActivity
