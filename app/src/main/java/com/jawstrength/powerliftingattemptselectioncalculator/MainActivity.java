@@ -235,7 +235,15 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (radioButton_female.isChecked())
         {
-            result = (500/(-0.0000000071*Math.pow(bodyweight/2.2,5)+0.0000015978*Math.pow(bodyweight/2.2,4)+0.0003282035*Math.pow(bodyweight/2.2,3)-0.1389344062*Math.pow(bodyweight/2.2,2)+16.2595764612*(bodyweight/2.2)-182.5406521018));
+            result = 500/
+                (
+                    ((594.31747775582))-
+                    ((27.23842536447)*(bw))+
+                    ((0.82112226871)*(Math.pow(bw,2)))-
+                    ((0.00930733913)*(Math.pow(bw,3)))+
+                    ((0.00004731582)*(Math.pow(bw,4)))-
+                    ((0.00000009054)*(Math.pow(bw,5)))
+                );
         }
         return result;
     }
