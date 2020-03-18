@@ -269,8 +269,6 @@ public class ResultActivity extends AppCompatActivity {
                     sq2Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
-
-
                     Total_Squat.remove((Integer) ((int) (sq2Attempt - (sq2Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
