@@ -87,7 +87,7 @@ public class ResultActivity extends AppCompatActivity {
         final TextView textViewTotal = findViewById(R.id.textViewTotal);
 
         final double wilks = getIntent().getExtras().getDouble(MainActivity.WILKS);
-        textViewWilks.setText(String.valueOf((int)(wilks * (showTotal() / 2.20462))));
+        textViewWilks.setText(String.valueOf((int)(wilks * (showTotal() / 2.2))));
 
         Log.d(MainActivity.ATTEMPTS_BENCH_1, String.valueOf(wilks));
 
@@ -166,6 +166,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq1Attempt - (sq1Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     sq1Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1Low.setTextColor(Color.parseColor("#FFFFFF"));
@@ -173,6 +175,8 @@ public class ResultActivity extends AppCompatActivity {
 
                     Total_Squat.remove((Integer) ((int) (sq1Attempt - (sq1Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq1Low.setBackground(null);
                     sq1Low.setBackgroundTintList(null);
@@ -191,12 +195,19 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((Integer) (sq1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
+
                     sq1Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
                     Total_Squat.remove((Integer) (sq1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq1Normal.setBackground(null);
                     sq1Normal.setBackgroundTintList(null);
@@ -215,13 +226,18 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq1Attempt + (sq1Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     sq1High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq1High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq1High.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
+
                     Total_Squat.remove((Integer) ((int) (sq1Attempt + (sq1Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq1High.setBackground(null);
                     sq1High.setBackgroundTintList(null);
@@ -241,13 +257,20 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq2Attempt - (sq2Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
 
                     sq2Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq2Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq2Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
+
                     Total_Squat.remove((Integer) ((int) (sq2Attempt - (sq2Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq2Low.setBackground(null);
                     sq2Low.setBackgroundTintList(null);
@@ -266,12 +289,20 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq2Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     sq2Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq2Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq2Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
                     Total_Squat.remove((Integer) ((int) (sq2Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq2Normal.setBackground(null);
                     sq2Normal.setBackgroundTintList(null);
@@ -290,13 +321,22 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq2Attempt + (sq2Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     sq2High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq2High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq2High.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
+
+
+
                     Total_Squat.remove((Integer) ((int) (sq2Attempt + (sq2Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq2High.setBackground(null);
                     sq2High.setBackgroundTintList(null);
@@ -318,12 +358,20 @@ public class ResultActivity extends AppCompatActivity {
                     textViewTotal.setText(String.valueOf(showTotal()));
 
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
+
                     sq3Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq3Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq3Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
+
                     Total_Squat.remove((Integer) ((int) (sq3Attempt - (sq3Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq3Low.setBackground(null);
                     sq3Low.setBackgroundTintList(null);
@@ -342,12 +390,21 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq3Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
+
                     sq3Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq3Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq3Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
+
                     Total_Squat.remove((Integer) ((int) (sq3Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq3Normal.setBackground(null);
                     sq3Normal.setBackgroundTintList(null);
@@ -366,13 +423,21 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Squat.add((int) (sq3Attempt + (sq3Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
+
                     sq3High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     sq3High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     sq3High.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
+
                     Total_Squat.remove((Integer) ((int) (sq3Attempt + (sq3Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     sq3High.setBackground(null);
                     sq3High.setBackgroundTintList(null);
@@ -394,13 +459,18 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn1Attempt - (bn1Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn1Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn1Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn1Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
+
                     Total_Bench.remove((Integer) ((int) (bn1Attempt - (bn1Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn1Low.setBackground(null);
                     bn1Low.setBackgroundTintList(null);
@@ -419,12 +489,18 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((Integer) (bn1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn1Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn1Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn1Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
                     Total_Bench.remove((Integer) (bn1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn1Normal.setBackground(null);
                     bn1Normal.setBackgroundTintList(null);
@@ -443,13 +519,19 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn1Attempt + (bn1Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn1High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn1High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn1High.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
 
+
                     Total_Bench.remove((Integer) ((int) (bn1Attempt + (bn1Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn1High.setBackground(null);
                     bn1High.setBackgroundTintList(null);
@@ -470,12 +552,16 @@ public class ResultActivity extends AppCompatActivity {
                     textViewTotal.setText(String.valueOf(showTotal()));
 
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn2Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn2Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn2Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
                     Total_Bench.remove((Integer) ((int) (bn2Attempt - (bn2Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn2Low.setBackground(null);
                     bn2Low.setBackgroundTintList(null);
@@ -494,12 +580,16 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn2Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn2Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn2Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn2Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
                     Total_Bench.remove((Integer) ((int) (bn2Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn2Normal.setBackground(null);
                     bn2Normal.setBackgroundTintList(null);
@@ -518,6 +608,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn2Attempt + (bn2Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn2High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn2High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn2High.setTextColor(Color.parseColor("#FFFFFF"));
@@ -525,6 +617,8 @@ public class ResultActivity extends AppCompatActivity {
 
                     Total_Bench.remove((Integer) ((int) (bn2Attempt + (bn2Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn2High.setBackground(null);
                     bn2High.setBackgroundTintList(null);
@@ -545,6 +639,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn3Attempt - (bn3Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
 
                     bn3Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn3Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
@@ -552,6 +648,8 @@ public class ResultActivity extends AppCompatActivity {
                 } else {
                     Total_Bench.remove((Integer) ((int) (bn3Attempt - (bn3Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn3Low.setBackground(null);
                     bn3Low.setBackgroundTintList(null);
@@ -570,12 +668,16 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn3Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn3Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn3Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn3Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
                     Total_Bench.remove((Integer) ((int) (bn3Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn3Normal.setBackground(null);
                     bn3Normal.setBackgroundTintList(null);
@@ -594,6 +696,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Bench.add((int) (bn3Attempt + (bn3Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     bn3High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     bn3High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     bn3High.setTextColor(Color.parseColor("#FFFFFF"));
@@ -601,6 +705,8 @@ public class ResultActivity extends AppCompatActivity {
 
                     Total_Bench.remove((Integer) ((int) (bn3Attempt + (bn3Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     bn3High.setBackground(null);
                     bn3High.setBackgroundTintList(null);
@@ -621,10 +727,14 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl1Attempt - (dl1Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl1Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl1Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl1Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     Total_Deadlift.remove((Integer) ((int) (dl1Attempt - (dl1Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
@@ -646,12 +756,16 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((Integer) (dl1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl1Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl1Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl1Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
                     Total_Deadlift.remove((Integer) (dl1Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     dl1Normal.setBackground(null);
                     dl1Normal.setBackgroundTintList(null);
@@ -670,6 +784,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl1Attempt + (dl1Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl1High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl1High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl1High.setTextColor(Color.parseColor("#FFFFFF"));
@@ -677,6 +793,8 @@ public class ResultActivity extends AppCompatActivity {
 
                     Total_Deadlift.remove((Integer) ((int) (dl1Attempt + (dl1Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     dl1High.setBackground(null);
                     dl1High.setBackgroundTintList(null);
@@ -696,6 +814,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl2Attempt - (dl2Attempt * 0.01)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
 
                     dl2Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl2Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
@@ -703,6 +823,8 @@ public class ResultActivity extends AppCompatActivity {
                 } else {
                     Total_Deadlift.remove((Integer) ((int) (dl2Attempt - (dl2Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     dl2Low.setBackground(null);
                     dl2Low.setBackgroundTintList(null);
@@ -721,12 +843,16 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl2Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl2Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl2Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl2Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
                     Total_Deadlift.remove((Integer) ((int) (dl2Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     dl2Normal.setBackground(null);
                     dl2Normal.setBackgroundTintList(null);
@@ -745,6 +871,8 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl2Attempt + (dl2Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl2High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl2High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl2High.setTextColor(Color.parseColor("#FFFFFF"));
@@ -752,6 +880,8 @@ public class ResultActivity extends AppCompatActivity {
 
                     Total_Deadlift.remove((Integer) ((int) (dl2Attempt + (dl2Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     dl2High.setBackground(null);
                     dl2High.setBackgroundTintList(null);
@@ -773,10 +903,15 @@ public class ResultActivity extends AppCompatActivity {
                     textViewTotal.setText(String.valueOf(showTotal()));
 
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl3Low.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl3Low.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl3Low.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     Total_Deadlift.remove((Integer) ((int) (dl3Attempt - (dl3Attempt * 0.01))));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
@@ -797,10 +932,16 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl3Attempt));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl3Normal.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl3Normal.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl3Normal.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     Total_Deadlift.remove((Integer) ((int) (dl3Attempt)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
@@ -821,10 +962,15 @@ public class ResultActivity extends AppCompatActivity {
                     Total_Deadlift.add((int) (dl3Attempt + (dl3Attempt * 0.02)));
                     textViewTotal.setText(String.valueOf(showTotal()));
 
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
+
                     dl3High.setBackground(getResources().getDrawable(R.drawable.rounded_conners));
                     dl3High.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
                     dl3High.setTextColor(Color.parseColor("#FFFFFF"));
                 } else {
+
+
+                    textViewWilks.setText(String.valueOf((wilks * (showTotal() / 2.2))));
 
                     Total_Deadlift.remove((Integer) ((int) (dl3Attempt + (dl3Attempt * 0.02))));
                     textViewTotal.setText(String.valueOf(showTotal()));

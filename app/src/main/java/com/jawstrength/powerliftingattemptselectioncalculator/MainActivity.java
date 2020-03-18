@@ -212,6 +212,7 @@ public class MainActivity extends AppCompatActivity {
 
     public double wilks(int bodyweight)
     {
+        double bw = (bodyweight / 2.2);
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
 
         RadioButton radioButton_male = findViewById(R.id.RadioButton_Male);
@@ -221,11 +222,20 @@ public class MainActivity extends AppCompatActivity {
 
         if (radioButton_male.isChecked())
         {
-            result = (500/(-0.0000000078*Math.pow(bodyweight/ 2.20462,5)+0.0000041543*Math.pow(bodyweight/ 2.20462,4)-0.0006430507*Math.pow(bodyweight / 2.20462,3)-0.0126966343*Math.pow(bodyweight/ 2.20462,2)+11.9982753419*(bodyweight/ 2.20462)-82.5815609216));
+            result = 500/
+                (
+                    ((-216.0475144))+
+                    ((16.2606339)*(bw))-
+                    ((0.002388645)*(Math.pow(bw,2)))-
+                    ((0.00113732)*(Math.pow(bw,3)))+
+                    ((0.00000701863)*(Math.pow(bw,4)))-
+                    ((0.00000001291)*(Math.pow(bw,5)))
+                );
+
         }
         else if (radioButton_female.isChecked())
         {
-            result = (500/(-0.0000000071*Math.pow(bodyweight/ 2.20462,5)+0.0000015978*Math.pow(bodyweight/ 2.20462,4)+0.0003282035*Math.pow(bodyweight/ 2.20462,3)-0.1389344062*Math.pow(bodyweight/ 2.20462,2)+16.2595764612*(bodyweight/ 2.20462)-182.5406521018));
+            result = (500/(-0.0000000071*Math.pow(bodyweight/2.2,5)+0.0000015978*Math.pow(bodyweight/2.2,4)+0.0003282035*Math.pow(bodyweight/2.2,3)-0.1389344062*Math.pow(bodyweight/2.2,2)+16.2595764612*(bodyweight/2.2)-182.5406521018));
         }
         return result;
     }
