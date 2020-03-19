@@ -1,44 +1,31 @@
 package com.jawstrength.powerliftingattemptselectioncalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.math.MathUtils;
-
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.EventLogTags;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-
 
 public class ResultActivity extends AppCompatActivity {
 
     private static DecimalFormat df = new DecimalFormat("#.#");
 
-
-    public ArrayList<Integer> Total = new ArrayList<>(27);
-
     public ArrayList<Integer> Total_Squat = new ArrayList<>(9);
     public ArrayList<Integer> Total_Bench = new ArrayList<>(9);
     public ArrayList<Integer> Total_Deadlift = new ArrayList<>(9);
-
 
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-
-
-
 
         TextView sqe1RM = findViewById(R.id.txtSquat);
         TextView bne1RM = findViewById(R.id.txtBench);
@@ -158,6 +145,7 @@ public class ResultActivity extends AppCompatActivity {
         dl3Normal.setText(String.valueOf(dl3Attempt));
         dl3High.setText(String.valueOf((int) (dl3Attempt + (dl3Attempt * 0.02))));
 
+        textViewTotal.setText(String.valueOf(showTotal()));
 
 // squat 1st attemtp
         sq1Low.setOnClickListener(new View.OnClickListener() {
