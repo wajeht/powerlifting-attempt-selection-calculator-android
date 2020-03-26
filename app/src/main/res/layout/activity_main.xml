@@ -27,6 +27,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:background="#FFFFFF"
                 android:clickable="true"
                 android:onClick="openAbout"
                 android:paddingTop="40dp"

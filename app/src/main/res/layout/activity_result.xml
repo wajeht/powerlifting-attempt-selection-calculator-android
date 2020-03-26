@@ -74,7 +74,6 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="-"
                         android:textAlignment="center" />
 
                     <TextView
@@ -118,7 +117,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="1st attempt: "
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/sq1Low"
@@ -162,7 +163,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="2nd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/sq2Low"
@@ -206,7 +209,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="3rd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/sq3Low"
@@ -288,7 +293,6 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="-"
                         android:textAlignment="center" />
 
                     <TextView
@@ -332,7 +336,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="1st attempt: "
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/bn1Low"
@@ -376,7 +382,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="2nd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/bn2Low"
@@ -420,7 +428,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="3rd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/bn3Low"
@@ -502,7 +512,6 @@
                         android:layout_width="50dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="-"
                         android:textAlignment="center" />
 
                     <TextView
@@ -550,7 +559,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="1st attempt: "
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/dl1Low"
@@ -595,7 +606,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="2nd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/dl2Low"
@@ -639,7 +652,9 @@
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-condensed"
                         android:text="3rd attempt:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/dl3Low"
@@ -730,7 +745,9 @@
                         android:paddingLeft="45dp"
                         android:paddingRight="5dp"
                         android:text="Wilks:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textViewWilks"
@@ -757,7 +774,9 @@
                         android:paddingLeft="45dp"
                         android:paddingRight="5dp"
                         android:text="Total:"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:textColor="#070000"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textViewTotal"
