@@ -103,7 +103,7 @@ public class ResultActivity extends AppCompatActivity {
 
         sqe1RM.setText("SQUAT e1RM: " + String.valueOf(squatMAX));
         bne1RM.setText("BENCH e1RM: " + String.valueOf(benchMAX));
-        dle1RM.setText("DEADLIFT e1RM: " + String.valueOf(deadliftMAX));
+        dle1RM.setText("DEADLIFT e1RM: " + deadliftMAX);
 
 
         // print out squat attempts
