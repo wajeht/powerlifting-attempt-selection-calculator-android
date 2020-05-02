@@ -141,7 +141,7 @@
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:hint="lbs."
+                    android:hint="lbs"
                     android:inputType="numberSigned"
                     android:textAlignment="center" />
             </LinearLayout>
