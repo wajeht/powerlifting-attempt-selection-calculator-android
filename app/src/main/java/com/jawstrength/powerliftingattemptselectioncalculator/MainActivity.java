@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String WILKS = "body weight";
 
+    public static final String BODYWEIGHT = "body_weight_weight";
+
+    public static final String GENDER = "gender";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         final EditText dlRpeID = findViewById(R.id.dlRpe);
 
         final Button btnCalculate = findViewById(R.id.btnCalculate);
+
+        final RadioButton female = findViewById(R.id.RadioButton_Femal);
+        final RadioButton male = findViewById(R.id.RadioButton_Male);
+
 
 
         // error handling if use dind't input all fields
@@ -124,6 +133,16 @@ public class MainActivity extends AppCompatActivity {
                     int dl2nd = secondAttempt(dl1RM);
                     int dl3rd = thirdAttempt(dl1RM);
 
+
+
+                    String gender = "";
+
+                    if (male.isChecked()) {
+                        gender = male.getText().toString();
+                    } else {
+                        gender = female.getText().toString();
+                    }
+
                     int bodyweight = Integer.parseInt(bodyWeightID.getText().toString());
 
                     double wilks = wilks(bodyweight);
@@ -149,6 +168,10 @@ public class MainActivity extends AppCompatActivity {
                     bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_1, dl1st);
                     bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_2, dl2nd);
                     bundle.putInt(MainActivity.ATTEMPTS_DEADLIFT_3, dl3rd);
+
+                    bundle.putInt(MainActivity.BODYWEIGHT, bodyweight);
+
+                    bundle.putString(MainActivity.GENDER,gender);
 
                     intent.putExtras(bundle);
                     startActivity(intent);

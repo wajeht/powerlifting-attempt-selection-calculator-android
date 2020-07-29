@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,7 +82,17 @@ public class ResultActivity extends AppCompatActivity {
         final double wilks = getIntent().getExtras().getDouble(MainActivity.WILKS);
         textViewWilks.setText(String.valueOf((int)(wilks * (showTotal() / 2.2))));
 
-        Log.d(MainActivity.ATTEMPTS_BENCH_1, String.valueOf(wilks));
+        //Log.d(MainActivity.ATTEMPTS_BENCH_1, String.valueOf(wilks));
+
+        // set body weight value from main activity
+        final TextView bodyweight = findViewById(R.id.textViewBodyweight);
+        final int bodyWeightValue = getIntent().getExtras().getInt(MainActivity.BODYWEIGHT);
+        bodyweight.setText(String.valueOf(bodyWeightValue));
+
+        // set male or female
+        final TextView textViewGender = findViewById(R.id.textViewGender);
+        final String gender = getIntent().getExtras().getString(MainActivity.GENDER);
+        textViewGender.setText(gender);
 
 
         // get user data from mainActivity
